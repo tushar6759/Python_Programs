@@ -206,8 +206,594 @@ print("amount to be paid is: "bill(u))
 
 
         """
+
+"""****************************16*************************
+classheld=int(input("enter no. of classes held: "))
+classattended=int(input("enter the classes attended: "))
+attendper=(classattended*100)/classheld
+if(attendper>80):
+    print("can give exam attendence is {:4.2f}% ".format(attendper))
+else:
+    print("cannot give exam attendence is {:4.2f}%".format(attendper))
+
+"""
+
+"""
+*******************17********************
+income=int(input("enter the income"))
+tax=0
+if(income<100000):
+    print("tax to be paid: ",tax)
+elif(income>100000 and income<200000):
+    tax=income*0.1
+    print("tax to be paid: ",tax)
+else:
+    tax=income*0.2
+    print("tax to be paid: ",tax) 
+
+
+
+
+"""  
+
+"""
+***********************18******************
+
+num=int(input("enter the number: "))
+temp=0
+sum=0
+while(num!=0):
+    temp=num%10
+    sum=sum+temp
+    num=num//10
+print("digital sum is given by ",sum)
+
+"""
+
+"""
+*********************19*************************
+
+num=int(input("enter the number: "))
+temp=0
+product=1
+while(num!=0):
+    temp=num%10
+    product=product*temp
+    num=num//10
+print("digital product is given by ",product)
+
+
+
+"""
+
+"""
+**********************************20***************************
+
+n=int(input("enter the no. of terms: "))
+sum=(10**(n+1)-10-9*n)/27
+print(sum)
+
+"""
+
+
+"""
+****************************21***********************
+
+n=int(input("enter rows "))
+r=n//2
+for i in range(r):
+      print("*"*(i+1))
+for i in range(r):
+    print("*"*(r-i))
+
+"""
+"""
+ ************22***************************88
+
+n=input("enter the number")
+print(n[::-1])
+
+
+"""
+
+"""
+****************************23***************************
+n=int(input("Enter number:"))
+temp=n
+rev=0
+while(n>0):
+    dig=n%10
+    rev=rev*10+dig
+    n=n//10
+if(temp==rev):
+    print("The number is a palindrome!")
+else:
+    print("The number isn't a palindrome!")
+"""
+"""
+**************************************24********************************
+
+
+num = 1634
+
+ 
+order = len(str(num))
+sum = 0
+temp = num
+while temp > 0:
+   digit = temp % 10
+   sum += digit ** order
+   temp //= 10
+
+if num == sum:
+   print(num,"is an Armstrong number")
+else:
+   print(num,"is not an Armstrong number")
+
+"""
+
+"""
+*******************25************
+
+num = int(input("Enter a number: "))
+
+factorial = 1
+
+if num < 0:
+   print("Sorry, factorial does not exist for negative numbers")
+elif num == 0:
+   print("The factorial of 0 is 1")
+else:
+   for i in range(1,num + 1):
+       factorial = factorial*i
+   print("The factorial of",num,"is",factorial)
+"""
+
+"""
+****************************************26*********************
+
+import math  
+num = int(input(" Enter the Number:"))  
+sum = 0  
+temp = num  
   
+while(temp > 0):  
+    rem = temp % 10  
+    fact = math.factorial(rem)  # Using the buitlt-in factorial() function  
+  
+    print("Factorial of %d = %d" %(rem, fact))  
+    sum = sum + fact  
+    temp = temp // 10  
+  
+print("\n Sum of Factorials of a Given Number %d = %d" %(num, sum))  
+      
+if (sum == num):  
+    print(" The given number is a Strong Number")  
+else:  
+    print(" The given number is not a Strong Number")   
+
+"""
+
+"""
+**********************************27***************************
+"""
+
+"""
+**********************************28***************************
+
+n = int(input("Enter any number: "))
+sum1 = 0
+for i in range(1, n):
+    if(n % i == 0):
+        sum1 = sum1 + i
+if (sum1 == n):
+    print("The number is a Perfect number!")
+else:
+    print("The number is not a Perfect number!")
+"""
+
+"""
+**********************************29***************************
+
+num = int(input("Enter a number: "))
+if num > 1:
+   # check for factors
+   for i in range(2,num):
+       if (num % i) == 0:
+           print(num,"is not a prime number")
+           print(i,"times",num//i,"is",num)
+           break
+   else:
+       print(num,"is a prime number")
+else:
+   print(num,"is not a prime number")
+"""
+
+"""
+**********************************30***************************
+
+rows = int(input("Enter the number of rows: "))  
+  
+for i in range(rows + 1, 0, -1):    
+    for j in range(0, i - 1):  
+        print("*", end=' ')  
+    print(" ")  
+"""
+
+"""
+**********************************31***************************
+
+rows = int(input("Enter the number of rows: "))   
+for i in range(rows+1):  
+  
+    for j in range(i):  
+        print(i, end=" ")  # print number  
+    print(" ")  
+"""
+
+"""
+**********************************32***************************
+
+rows = int(input("Enter the number of rows: "))  
+  
+for i in range(1, rows+1):  
+    for j in range(1, i + 1):  
+        print(j, end=' ')  
+    print("")  
+"""
+
+"""
+**********************************33***************************
+
+n = int(input("Enter number of rows: "))
+
+a = 97
+
+for i in range(1,n+1):
+    for j in range(1, i+1):
+        print("%c" %(a), end="")
+    a +=1
+    print()
+"""
+
+"""
+**********************************34***************************
+
+str = input("Enter a string: ")
+
+counter = 0
+for s in str:
+      counter = counter+1
+print("Length of the input string is:", counter)
+"""
+
+"""
+**********************************35***************************
+
+def chars_mix_up(a, b):
+  new_a = b[:2] + a[2:]
+  new_b = a[:2] + b[2:]
+
+  return new_a + ' ' + new_b
+print(chars_mix_up('abc', 'xyz'))
+"""
+
+"""
+**********************************36***************************
+
+def add_string(str1):
+  length = len(str1)
+
+  if length > 2:
+    if str1[-3:] == 'polis':
+      str1 += 'poliscs'
+    else:
+      str1 += 'polis'
+
+  return str1
+print(add_string('ab'))
+print(add_string('abc'))
+print(add_string('string'))
+"""
+
+"""
+**********************************37***************************
+
+def char_frequency(str1):
+    dict = {}
+    for n in str1:
+        keys = dict.keys()
+        if n in keys:
+            dict[n] += 1
+        else:
+            dict[n] = 1
+    return dict
+print(char_frequency('google.com'))
+"""
+
+"""
+**********************************38***************************
+
+def change_sring(str1):
+      return str1[-1:] + str1[1:-1] + str1[:1]
+	  
+print(change_sring('abcd'))
+print(change_sring('12345'))
+"""
+
+"""
+**********************************39***************************
+
+def odd_values_string(str):
+  result = "" 
+  for i in range(len(str)):
+    if i % 2 == 0:
+      result = result + str[i]
+  return result
+
+print(odd_values_string('abcdef'))
+print(odd_values_string('python'))
+"""
+
+"""
+**********************************40***************************
+
+user_input = input("What's your favourite language? ")
+print("My favourite language is ", user_input.upper())
+print("My favourite language is ", user_input.lower())
+"""
+
+
+"""
+*******************************************41************************
+
+str1 = 'The quick brown fox jumps over the lazy dog.'
+print()
+print(str1.count("fox"))
+print()
+
+
+
+"""
+
+"""
+*******************************************42************************
+
+str1 = 'Tushar sharma'
+print(str1[:4].lower() + str1[4:])
+
+
+
+"""
+
+"""
+*******************************************43************************
+def remove_spaces(str1):
+  str1 = str1.replace(' ','')
+  return str1
+    
+print(remove_spaces("T u s ha r"))
+print(remove_spaces("S ha r ma "))
+
+
+"""
+
+"""
+*******************************************44************************
+
+def moveSpaces(str1): 
+    no_spaces = [char for char in str1 if char!=' ']   
+    space= len(str1) - len(no_spaces)
+    result = ' '*space    
+    return result + ''.join(no_spaces)
+  
+s1 = "T us har shar m a"
+print("Original String:\n",s1)
+
+print("\nAfter moving all spaces to the front:")
+print(moveSpaces(s1))
+
+
+"""
+
+"""
+*******************************************45************************
+
+from collections import Counter
+
+string= "pppppppghhhijeuupffe"
+print(string)
+
+result= Counter(string)
+result= max(result, key=result.get)
+
+print("Most frequent character: ",result)
+
+
+
+"""
+
+"""
+*******************************************46************************
+
+def capitalize_first_last_letters(str1):
+     str1 = result = str1.title()
+     result =  ""
+     for word in str1.split():
+        result += word[:-1] + word[-1].upper() + " "
+     return result[:-1]  
+     
+print(capitalize_first_last_letters(" tushar sharma"))
+print(capitalize_first_last_letters(" acropolis college"))
 
 
 
 
+"""
+
+"""
+*******************************************47************************
+def sum_digits_string(str1):
+    sum_digit = 0
+    for x in str1:
+        if x.isdigit() == True:
+            z = int(x)
+            sum_digit = sum_digit + z
+
+    return sum_digit
+     
+print(sum_digits_string("123abcd45"))
+print(sum_digits_string("abcd1234"))
+
+
+"""
+
+"""
+*******************************************48************************
+
+def find_longest_word(words_list):
+    word_len = []
+    for n in words_list:
+        word_len.append((len(n), n))
+    word_len.sort()
+    return word_len[-1][0], word_len[-1][1]
+result = find_longest_word(["tushar", "krishna", "harsh"])
+print("\nLongest word: ",result[1])
+print("Length of the longest word: ",result[0])
+
+"""
+
+"""
+*******************************************49************************
+def x(n):
+    return n^2 + 1
+
+print x(4)
+
+
+"""
+
+"""
+*******************************************50************************
+ str = 'Y-tatata-acropolis: 0.8475'
+ start = str.find(':')
+ print(start)
+ number = str[start+1:]
+ new_number = float(number)
+ print ('Number:',number,type(number))
+ print ('New Number:',new_number,type(new_number))
+
+
+"""
+
+"""
+*******************************************51************************
+
+a = float(input("Input first number: "))
+b = float(input("Input second number: "))
+c = float(input("Input third number: "))
+if a > b:
+    if a < c:
+        median = a
+    elif b > c:
+        median = b
+    else:
+        median = c
+else:
+    if a > c:
+        median = a
+    elif b < c:
+        median = b
+    else:
+        median = c
+
+print("The median is", median)
+
+"""
+
+ 
+"""
+*******************************************55************************
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+n=int(input("Input a number to compute the factiorial : "))
+print(factorial(n))
+
+
+"""
+
+"""
+*******************************************56************************
+nl=[]
+for x in range(1500, 2701):
+    if (x%7==0) and (x%5==0):
+        nl.append(str(x))
+print (','.join(nl))
+
+
+"""
+
+"""
+*******************************************57************************
+
+def test_prime(n):
+    if (n==1):
+        return False
+    elif (n==2):
+        return True;
+    else:
+        for x in range(2,n):
+            if(n % x==0):
+                return False
+        return True             
+print(test_prime(9))
+
+"""
+
+"""
+*******************************************58************************
+
+num = 163486
+order = len(str(num))
+sum = 0
+temp = num
+while temp > 0:
+   digit = temp % 10
+   sum += digit ** order
+   temp //= 10
+
+if num == sum:
+   print(num,"is an Armstrong number")
+else:
+   print(num,"is not an Armstrong number")
+
+"""
+
+"""
+*******************************************59************************
+def B():
+    print("Inside the method B.")
+    
+def A():
+    print("Inside the method A.")
+    return B
+
+returned_function = A()
+returned_function()
+
+
+"""
+
+ 
+
+
+list1 = [11, 5, 17, 18, 23]
+ 
+total = sum(list1)
+print("Sum of all elements in given list: ", total)
+"""
+"""
+ 
